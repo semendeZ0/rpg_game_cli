@@ -1,8 +1,8 @@
-from Class.persons._base_Player import Player
-from Class.persons._base_NPC import NPC
-from Class.Dado import Dado
+from Class.persons.races.Assassino import Assassin
 
 
-player = Player("Erick")
+player = Assassin("Erick")
 
-print(player.nome)
+player.levelUp()
+
+print(f'{player.level}\n{player.forca}\n{player.vida}')

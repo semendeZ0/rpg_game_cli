@@ -25,11 +25,13 @@ class Player:
 
 
         # ----STATUS-----
-        self.vida = 100 
-        self.defesa = 5
-        self.forca = 10
+        self.vida = 100 * self.level
+        self.defesa = 5 * self.level
+        self.forca = 10 * self.level
+        self.agilidade = 2 * self.level
         
     
+    # só um teste
     def dialogar(self, npc:NPC):
         falas = [
             [f'Como você está, {npc.nome} ?']
@@ -37,7 +39,7 @@ class Player:
 
         fala = choice(falas)
 
-        print('Erick: ', end="")
+        print(f'{self.nome}: ', end="")
         print(*fala)
 
         sleep(0.5)
@@ -48,3 +50,5 @@ class Player:
 
 
 
+    def levelUp(self):
+        self.level += 1
