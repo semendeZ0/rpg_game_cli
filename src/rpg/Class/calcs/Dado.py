@@ -19,8 +19,3 @@ class Dado:
     @property
     def getValor(self):
         return self.__valor
-
-
-
-
-dado = Dado(1)
